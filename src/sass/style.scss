@@ -187,7 +187,7 @@ nav {
 	position: relative;
 	height: 70vh;
 	width: 100%;
-	background-image: url(/dist/img/Milan_hero_small.jpg);
+	background-image: url(../img/Milan_hero_small.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -410,7 +410,6 @@ nav {
 	margin-top: 2em;
 }
 
-
 //FOOTER//
 .footer {
 	width: 100%;
@@ -459,23 +458,21 @@ nav {
 			margin: 1.5em 1.2em;
 			font-size: 2rem;
 		}
-
 	}
 	.img-center {
 		text-align: center;
 		img {
 			margin-top: 1.5em;
-		
+
 			height: auto;
 			max-width: 500px;
 		}
 	}
-
 }
 
 @media (min-width: 768px) {
 	.header {
-		background-image: url(/dist/img/Milan_hero_big.jpg);
+		background-image: url(../img/Milan_hero_big.jpg);
 		background-position: 0 80%;
 	}
 
