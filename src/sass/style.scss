@@ -1,0 +1,596 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #f5f5f5;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+[id] {
+	scroll-margin-top: 60px;
+}
+
+.links {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+
+	li {
+		list-style: none;
+	}
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.cookie-box {
+	position: fixed;
+	bottom: 0;
+	background-color: #eee;
+	padding: 1em;
+	font-size: 1.4rem;
+	max-height: 200px;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	z-index: 1;
+	transform: translateY(100%);
+	animation: show-cookies 0.5s 0.5s forwards;
+}
+
+.cookie-btn {
+	margin-top: 1em;
+	padding: 1em 1.5em;
+	font-size: 1.6rem;
+	border-radius: 8px;
+	color: #fff;
+	border: none;
+	background-color: #6faf6f;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	z-index: 100;
+}
+.cookie-btn:hover {
+	background-color: #000;
+}
+
+@keyframes show-cookies {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.hide-cookies {
+	opacity: 0;
+	transform: translateY(100%);
+	animation: hide-cookies 0.5s forwards;
+}
+
+@keyframes hide-cookies {
+	to {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+}
+
+.t-center {
+	text-align: center;
+}
+
+//nav//
+
+nav {
+	padding: 0 2em;
+	background-color: #6faf6f;
+	position: sticky;
+	z-index: 10;
+	top: 0;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+	a {
+		text-decoration: none;
+		color: #fff;
+		transition: color 0.3s;
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	a:hover {
+		color: #e60026;
+	}
+}
+
+.navbar {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #6faf6f;
+}
+
+.navbar .logo a {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.navbar .links {
+	display: flex;
+	gap: 3rem;
+}
+
+.navbar .toggle_btn {
+	color: #fff;
+	font-size: 2.2rem;
+	cursor: pointer;
+	display: none;
+}
+
+.nav-logo {
+	height: 75px;
+	width: 75px;
+}
+
+// DROPDOWN MENU //
+.dropdown_menu {
+	display: none;
+	position: absolute;
+	right: 2rem;
+	top: 60px;
+	height: 0;
+	width: 300px;
+	background-color: rgba(0, 0, 0, 0.9);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	z-index: 1;
+
+	li {
+		padding: 1em;
+		font-size: 2.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.dropdown_menu.open {
+	height: auto;
+}
+
+.section-padding {
+	padding-top: 1em;
+}
+//header
+
+.header {
+	position: relative;
+	height: 70vh;
+	width: 100%;
+	background-image: url(/dist/img/Milan_hero_small.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.hero-img {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.hero-text {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: #fff;
+
+	h1 {
+		font-family: 'Gloria Hallelujah', cursive;
+		margin-bottom: 0.5em;
+		font-size: 4rem;
+		text-shadow: 3px 3px 5px #000;
+		color: #ddd;
+	}
+
+	p {
+		font-size: 1.6rem;
+		margin: 0 1em;
+	}
+
+	.subtitle {
+		font-size: 3rem;
+	}
+
+	.btn {
+		font-size: 1.8rem;
+
+		font-weight: bold;
+		margin-top: 2em;
+		text-transform: uppercase;
+		padding: 0.5em 1em;
+		text-align: center;
+		border-radius: 25px;
+		width: 200px;
+		color: #ddd;
+		background-color: #e60026;
+		border: none;
+		cursor: pointer;
+		transition: color 0.3s;
+	}
+	.btn:hover {
+		color: black;
+	}
+}
+
+//MAIN
+.title {
+	text-align: center;
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin-top: 1.5em;
+	color: #6faf6f;
+}
+
+.move-1 {
+	padding-top: 2.5em;
+	color: #fff;
+}
+
+.underline {
+	margin: 15px auto 20px;
+	width: 90px;
+	height: 4px;
+	background-color: #e60026;
+}
+
+.underline-2 {
+	margin: 15px auto 40px;
+	width: 90px;
+	height: 4px;
+	background-color: #6faf6f;
+}
+
+.about {
+	&__box {
+		text-align: center;
+		font-size: 1.8rem;
+		margin: 1em;
+	}
+
+	&__text {
+		p {
+			margin-top: 1em;
+		}
+	}
+}
+
+// worth
+.worthit {
+	position: relative;
+	height: auto;
+	width: 100%;
+	background-color: #db5046;
+
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	.items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		padding-top: 5em;
+	}
+
+	.box {
+		width: 300px;
+		height: 300px;
+		margin: 1em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: 0.3s;
+		position: relative;
+		cursor: pointer;
+
+		p {
+			font-size: 3rem;
+			font-weight: bold;
+			letter-spacing: 3px;
+			text-align: center;
+			text-transform: uppercase;
+			color: #fff;
+			margin-top: 1em;
+			padding: 1em;
+		}
+
+		i {
+			font-size: 7rem;
+		}
+	}
+
+	.box:hover {
+		transform: scale(1.2);
+	}
+}
+
+.content {
+	position: relative;
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 2em 0;
+	}
+
+	&__icons {
+		font-size: 8rem;
+		width: 100%;
+		text-align: center;
+		color: #db5046;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		margin: 0 1.2em;
+		text-align: justify;
+
+		p {
+			margin: 0.8em 0;
+		}
+		span {
+			font-weight: bold;
+		}
+
+		li {
+			margin-left: 1.2em;
+			margin-top: 0.2em;
+		}
+
+		.sixt {
+			color: #ff5f00;
+		}
+
+		.sixt:hover {
+			color: #6faf6f;
+		}
+	}
+}
+
+.section-break {
+	height: 80px;
+	position: relative;
+	margin: 3em 0;
+	background-color: #db5046;
+	z-index: 0;
+}
+
+.social-media {
+	position: relative;
+	height: auto;
+	width: 100%;
+	background-color: #6faf6f;
+
+	text-align: center;
+
+	.social-link {
+		color: #f5f5f5;
+
+		.social-icon {
+			margin: 1em;
+			font-size: 3rem;
+		}
+	}
+}
+
+.coffe-btn {
+	margin-top: 2em;
+}
+
+
+//FOOTER//
+.footer {
+	width: 100%;
+	height: 50px;
+	background-color: #db5046;
+	position: absolute;
+	font-size: 1.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+//RWD//
+@media (max-width: 576px) {
+	.dropdown_menu {
+		left: 2rem;
+		width: unset;
+	}
+}
+@media (min-width: 576px) {
+	.cookie-box {
+		padding: 2em;
+	}
+
+	.title {
+		font-size: 2.2rem;
+	}
+
+	.content {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__icons {
+			display: flex;
+			flex-direction: column;
+			width: 20%;
+			justify-content: center;
+			font-size: 8rem;
+		}
+
+		&__text {
+			width: 80%;
+			margin: 1.5em 1.2em;
+			font-size: 2rem;
+		}
+
+	}
+	.img-center {
+		text-align: center;
+		img {
+			margin-top: 1.5em;
+		
+			height: auto;
+			max-width: 500px;
+		}
+	}
+
+}
+
+@media (min-width: 768px) {
+	.header {
+		background-image: url(/dist/img/Milan_hero_big.jpg);
+		background-position: 0 80%;
+	}
+
+	.title {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 992px) {
+	.navbar .links,
+	.navbar .action_btn {
+		display: none;
+	}
+
+	.navbar .toggle_btn {
+		display: block;
+	}
+
+	.dropdown_menu {
+		display: block;
+	}
+}
+
+@media (min-width: 992px) {
+	.hero-text {
+		.header-title {
+			font-size: 6.5rem;
+
+			.subtitle {
+				font-size: 5rem;
+			}
+		}
+
+		.header-subtitle {
+			font-size: 2.4rem;
+		}
+	}
+
+	.title {
+		font-size: 3rem;
+	}
+
+	.about {
+		&__box {
+			text-align: center;
+			font-size: 2.2rem;
+			padding: 0 1em;
+		}
+	}
+
+	.items .box {
+		width: 300px;
+		height: 300px;
+
+		p {
+			font-size: 2.8rem;
+			margin-top: 0.6em;
+			padding: 1em;
+		}
+
+		i {
+			font-size: 6.5rem;
+		}
+	}
+
+	.content {
+		&__text {
+			font-size: 2.2rem;
+		}
+	}
+
+	.social-media .social-link .social-icon {
+		font-size: 4rem;
+	}
+
+	.footer {
+		font-size: 1.6rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero-text {
+		.btn {
+			&::before {
+				background-color: #ddd;
+			}
+		}
+		.btn-special-animation {
+			position: relative;
+			transition: background-color 0.3s;
+			overflow: hidden;
+			z-index: 0;
+
+			&::before {
+				display: block;
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				transform: scaleX(0);
+				transform-origin: right;
+				transition: transform 0.3s;
+				z-index: -1;
+			}
+
+			&:hover::before {
+				transform: scaleX(1);
+				transform-origin: left;
+			}
+		}
+	}
+
+	.section-break {
+		height: 120px;
+	}
+}
